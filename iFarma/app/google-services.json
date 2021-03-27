@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "347324300422",
+    "project_id": "ifarma-68f26",
+    "storage_bucket": "ifarma-68f26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347324300422:android:0f0e49f14c781cf0192507",
+        "android_client_info": {
+          "package_name": "com.example.ifarma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347324300422-9u4unodp88p595kso3qfrk09usn66ug3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCg0dYYDS8_3smb4tiIcRLBYtGdfPN4qqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347324300422-9u4unodp88p595kso3qfrk09usn66ug3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
