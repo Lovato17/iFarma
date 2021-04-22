@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
         //DECLARANDO A VARIAVEL
         edtemail = findViewById(R.id.email);
         edtsenha = findViewById(R.id.senha);
-        Btn_logar=findViewById(R.id.btn_logar);
+
         Btn_cadastrar=findViewById(R.id.bt_cadastrar);
         mAuth=FirebaseAuth.getInstance();
-
+        Btn_logar=findViewById(R.id.btn_logar);
         //CASO O BOTAO SEJA CLICADO
         Btn_logar.setOnClickListener(new View.OnClickListener(){
 
