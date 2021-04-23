@@ -53,7 +53,6 @@
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPersonName"
-        android:textColor="#C6FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"

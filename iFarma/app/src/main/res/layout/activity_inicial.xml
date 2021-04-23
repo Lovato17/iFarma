@@ -13,32 +13,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Drogasil"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="133dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_ultrafarma"
+        tools:layout_editor_absoluteX="40dp" />
 
     <Button
         android:id="@+id/btn_ultrafarma"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ultrafarma"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="190dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_drogamais"
+        tools:layout_editor_absoluteX="136dp" />
 
     <Button
         android:id="@+id/btn_drogamais"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Droga mais Brasil"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="249dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="284dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="306dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/textView"
