@@ -17,6 +17,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Cadastro extends AppCompatActivity {
     //DECLARANDO O TIPO E A VARIAVEL DO BOTAO
     private EditText etemail;
@@ -35,13 +38,13 @@ public class Cadastro extends AppCompatActivity {
         //DECLARANDO A VARIAVEL
         etemail = findViewById(R.id.email);
         etsenha = findViewById(R.id.senha);
-        Btn_logar=findViewById(R.id.btn_logar);
-        Btn_cadastrar=findViewById(R.id.bt_cadastrar);
-        Btn_voltar=findViewById(R.id.btn_voltar);
-        mAuth =FirebaseAuth.getInstance();
+        Btn_logar = findViewById(R.id.btn_logar);
+        Btn_cadastrar = findViewById(R.id.bt_cadastrar);
+        Btn_voltar = findViewById(R.id.btn_voltar);
+        mAuth = FirebaseAuth.getInstance();
 
         //SETANDO O CLICK DO BOTAO
-        Btn_voltar.setOnClickListener(new View.OnClickListener(){
+        Btn_voltar.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -51,47 +54,63 @@ public class Cadastro extends AppCompatActivity {
         });
 
 
-        Btn_cadastrar.setOnClickListener(new View.OnClickListener(){
+        Btn_cadastrar.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+
+
+
+                if (etemail.getText().toString().isEmpty() || etsenha.getText().toString().isEmpty()) {
+                    Toast.makeText(Cadastro.this, "EXISTEM CAMPOS EM BRANCOS", Toast.LENGTH_SHORT).show();
+                }
+
                 //METODO PARA PEGAR AS INFORMAÇOES NO EDIT TEXT
+                else{
                 Pegarinfo();
                 //METODO PARA SALVAR INFORMAÇOES NO BANCO DE DADOS
-                login();
+                login();}
+
             }
         });
 
     }
 
     private void irparateladelogin() {
-        startActivity(new Intent(Cadastro.this,MainActivity.class));
+        startActivity(new Intent(Cadastro.this, MainActivity.class));
+
     }
 
     private void login() {
-        mAuth.createUserWithEmailAndPassword(user.getEmail(),user.getSenha())
+        mAuth.createUserWithEmailAndPassword(user.getEmail(), user.getSenha())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
+                            Toast.makeText(Cadastro.this, "cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
                             FirebaseUser use = mAuth.getCurrentUser();
                             user.setId(use.getUid());
                             user.salvardados();
-                            startActivity(new Intent(Cadastro.this,MainActivity.class));
-                        }else{
-                            Toast.makeText(Cadastro.this,"ERRO AO CRIAR LOGIN",Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(Cadastro.this, MainActivity.class));
+
+                        } else {
+                            Toast.makeText(Cadastro.this, "CADASTRO EXISTENTE OU EMAIL INVALIDO", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
     }
+
     private void Pegarinfo() {
-        if(etemail.getText().toString()==""||etsenha.getText().toString()==""){
-            Toast.makeText(this,"Preencha todos os campos!!!",Toast.LENGTH_LONG);
-        }else{
+
+
+
             user = new Usuario();
             user.setEmail(etemail.getText().toString());
             user.setSenha(etsenha.getText().toString());
-        }
+
 
     }
+
+
 }
+
