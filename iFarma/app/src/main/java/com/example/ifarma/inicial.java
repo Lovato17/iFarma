@@ -14,6 +14,7 @@ public class inicial extends AppCompatActivity {
     private Button Drogasil;
     private Button Ultrafarma;
     private Button Drogamais;
+    private Button Produtos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,14 +26,22 @@ public class inicial extends AppCompatActivity {
         Drogasil=(Button)findViewById(R.id.btn_drograsil);
         Ultrafarma=(Button)findViewById(R.id.btn_ultrafarma);
         Drogamais=(Button)findViewById(R.id.btn_drogamais);
+        Produtos=(Button)findViewById(R.id.btn_produtos);
 
         //LEVA PARA A TELA AONDE HÁ O WEBVIEW DA DROGASIL
         Drogasil.setOnClickListener(new Button.OnClickListener(){
-
             @Override
             public void onClick(View v) {
                 Intent DROGASIL = new Intent(v.getContext(), Drogasil.class);
                 startActivity(DROGASIL);
+            }
+        });
+
+        //LEVA PARA A TELA PRODUTOS
+        Produtos.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                irparatelaProdutos();
             }
         });
 
@@ -55,6 +64,9 @@ public class inicial extends AppCompatActivity {
                 startActivity(DROGAMAISBRASIL);
             }
         });
-
+    }
+    private void irparatelaProdutos() {
+        Intent intent = new Intent(this, Produtos.class);
+        startActivity(intent);
     }
 }

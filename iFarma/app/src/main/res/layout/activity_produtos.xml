@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    tools:context=".Produtos">
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,27 +33,22 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <RadioGroup
-                    android:id="@+id/rdgProdutos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <RadioButton
-                        android:id="@+id/allegra"
+                    <CheckBox
+                        android:id="@+id/chbxAllegra"
                         android:layout_width="162dp"
                         android:layout_height="wrap_content"
-                        android:text="Allegra  R$ 10,00" />
+                        android:text="Allegra  R$ 10,00"/>
 
                     <ImageView
                         android:layout_width="174dp"
                         android:layout_height="172dp"
                         android:background="@drawable/allegra" />
 
-                    <RadioButton
-                        android:id="@+id/buprofeno"
+                    <CheckBox
+                        android:id="@+id/chbxBuprofeno"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Buprofeno  R$ 7,00" />
+                        android:text="Buprofeno  R$ 7,00"/>
 
                     <ImageView
                         android:layout_width="174dp"
@@ -61,22 +56,22 @@
                         android:background="@drawable/buprofeno" />
 
 
-                    <RadioButton
-                        android:id="@+id/dorflex"
+                    <CheckBox
+                        android:id="@+id/chbxDorflex"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Dorflex  R$ 5,00" />
+                        android:text="Dorflex  R$ 5,00"/>
 
                     <ImageView
                         android:layout_width="174dp"
                         android:layout_height="168dp"
                         android:background="@drawable/dorflex" />
 
-                    <RadioButton
-                        android:id="@+id/eficacia"
+                    <CheckBox
+                        android:id="@+id/chbxEficacia"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Eficacia  R$ 15,00" />
+                        android:text="Eficacia  R$ 15,00"/>
 
 
                     <ImageView
@@ -84,51 +79,49 @@
                         android:layout_height="168dp"
                         android:background="@drawable/eficacia" />
 
-                    <RadioButton
-                        android:id="@+id/loratamed"
+                    <CheckBox
+                        android:id="@+id/chbxLoratamed"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Loratamed  R$ 8,00" />
+                        android:text="Loratamed  R$ 8,00"/>
 
                     <ImageView
                         android:layout_width="174dp"
                         android:layout_height="168dp"
                         android:background="@drawable/loratamed" />
 
-                    <RadioButton
-                        android:id="@+id/luftal"
+                    <CheckBox
+                        android:id="@+id/chbxLuftal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Luftal  R$ 10,00" />
+                        android:text="Luftal  R$ 10,00"/>
 
                     <ImageView
                         android:layout_width="174dp"
                         android:layout_height="168dp"
                         android:background="@drawable/luftal" />
 
-                    <RadioButton
-                        android:id="@+id/ritmoneuran"
+                    <CheckBox
+                        android:id="@+id/chbxRitmoneuran"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ritmoneuran  R$ 12,00" />
+                        android:text="Ritmoneuran  R$ 12,00"/>
 
                     <ImageView
                         android:layout_width="174dp"
                         android:layout_height="168dp"
                         android:background="@drawable/ritmoneuran" />
 
-                    <RadioButton
-                        android:id="@+id/simeticona"
+                    <CheckBox
+                        android:id="@+id/chbxSimeticona"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Simeticona  R$ 10,00" />
+                        android:text="Simeticona  R$ 10,00"/>
 
                     <ImageView
                         android:layout_width="174dp"
                         android:layout_height="168dp"
                         android:background="@drawable/simeticona" />
-
-                </RadioGroup>
 
             </LinearLayout>
         </ScrollView>

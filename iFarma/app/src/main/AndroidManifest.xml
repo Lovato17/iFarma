@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Drogamaisbrasil"></activity>
+        <activity android:name=".Carrinho"></activity>
+        <activity android:name=".Produtos" />
+        <activity android:name=".Drogamaisbrasil" />
         <activity android:name=".Ultrafarma" />
         <activity android:name=".Drogasil" />
         <activity android:name=".inicial" />

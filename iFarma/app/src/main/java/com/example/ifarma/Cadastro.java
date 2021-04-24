@@ -53,32 +53,23 @@ public class Cadastro extends AppCompatActivity {
             }
         });
 
-
         Btn_cadastrar.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
-
-
                 if (etemail.getText().toString().isEmpty() || etsenha.getText().toString().isEmpty()) {
                     Toast.makeText(Cadastro.this, "EXISTEM CAMPOS EM BRANCOS", Toast.LENGTH_SHORT).show();
                 }
-
                 //METODO PARA PEGAR AS INFORMAÇOES NO EDIT TEXT
                 else{
                 Pegarinfo();
                 //METODO PARA SALVAR INFORMAÇOES NO BANCO DE DADOS
                 login();}
-
             }
         });
-
     }
 
     private void irparateladelogin() {
         startActivity(new Intent(Cadastro.this, MainActivity.class));
-
     }
 
     private void login() {
@@ -101,16 +92,9 @@ public class Cadastro extends AppCompatActivity {
     }
 
     private void Pegarinfo() {
-
-
-
             user = new Usuario();
             user.setEmail(etemail.getText().toString());
             user.setSenha(etsenha.getText().toString());
-
-
     }
-
-
 }
 

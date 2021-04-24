@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
-
                     }
                 });
 
@@ -94,12 +93,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void irparateladecadastro() {
-        startActivity(new Intent(this,Cadastro.class));
+        startActivity(new Intent(this, Cadastro.class));
     }
 
     //METODO QUE LEVA PARA A TELA INICIAL
     private void irparatelainicial() {
-        startActivity(new Intent(this,inicial.class));
-
+        startActivity(new Intent(this, inicial.class));
     }
 }

@@ -29,15 +29,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Droga mais Brasil"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/btn_produtos"
         tools:layout_editor_absoluteX="0dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_produtos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="284dp"
-        android:text="Button"
+        android:text="Produtos"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="16dp" />
 
