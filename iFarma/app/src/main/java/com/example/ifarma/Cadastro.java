@@ -57,7 +57,7 @@ public class Cadastro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (etemail.getText().toString().isEmpty() || etsenha.getText().toString().isEmpty()) {
-                    Toast.makeText(Cadastro.this, "EXISTEM CAMPOS EM BRANCOS", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Cadastro.this, "Existem campos em Braco!!!", Toast.LENGTH_SHORT).show();
                 }
                 //METODO PARA PEGAR AS INFORMAÇOES NO EDIT TEXT
                 else{
@@ -78,14 +78,14 @@ public class Cadastro extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(Cadastro.this, "cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Cadastro.this, "Cadastrado com Sucesso!!", Toast.LENGTH_SHORT).show();
                             FirebaseUser use = mAuth.getCurrentUser();
                             user.setId(use.getUid());
                             user.salvardados();
                             startActivity(new Intent(Cadastro.this, MainActivity.class));
 
                         } else {
-                            Toast.makeText(Cadastro.this, "CADASTRO EXISTENTE OU EMAIL INVALIDO", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Cadastro.this, "Cadastro já existente ou E-mail inválido", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
