@@ -8,29 +8,13 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.ImageView;
 
 public class inicial extends AppCompatActivity {
 
     private Button Drogasil;
     private Button Ultrafarma;
     private Button Drogamais;
-    private Button btndrogasil;
-    private Button btnult;
-    private Button btndrogmais;
-    public static int farmacias;
-
-    //ligando as imagens da outra tela
-   /*/private Produtos imgdgm = new Produtos();
-    private ImageView imgdrogamais=imgdgm.imgdrogamais;
-    private Produtos imgult = new Produtos();
-    private ImageView imgultrafarma=imgult.imgultrafarma;
-    private Produtos imgdrs = new Produtos();
-    private ImageView imgdrogasil=imgdrs.imgdrogasil;/*/
-
-
-
-
+    private Button Produtos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,50 +23,10 @@ public class inicial extends AppCompatActivity {
 
 
         //DECLARANDO OS BOTOES
-
         Drogasil=(Button)findViewById(R.id.btn_drograsil);
         Ultrafarma=(Button)findViewById(R.id.btn_ultrafarma);
         Drogamais=(Button)findViewById(R.id.btn_drogamais);
-        btndrogasil=(Button)findViewById(R.id.btndg);
-
-
-
-
-
-        btndrogasil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                farmacias= 1;
-
-                irparatelaproduto();
-            }
-        });
-
-        btnult = (Button)findViewById(R.id.btnult);
-        btnult.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-               farmacias= 2;
-
-                irparatelaproduto();
-            }
-        });
-
-        btndrogmais = (Button)findViewById(R.id.btndrogmais);
-        btndrogmais.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                farmacias= 3;
-
-            irparatelaproduto();
-            }
-        });
-
-
-
-
+        Produtos=(Button)findViewById(R.id.btn_produtos);
 
         //LEVA PARA A TELA AONDE HÁ O WEBVIEW DA DROGASIL
         Drogasil.setOnClickListener(new Button.OnClickListener(){
@@ -94,7 +38,12 @@ public class inicial extends AppCompatActivity {
         });
 
         //LEVA PARA A TELA PRODUTOS
-
+        Produtos.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                irparatelaProdutos();
+            }
+        });
 
         Ultrafarma.setOnClickListener(new Button.OnClickListener(){
 
@@ -116,9 +65,8 @@ public class inicial extends AppCompatActivity {
             }
         });
     }
-     public void irparatelaproduto(){
-        startActivity(new Intent(inicial.this, Produtos.class));
+    private void irparatelaProdutos() {
+        Intent intent = new Intent(this, Produtos.class);
+        startActivity(intent);
     }
-
-
 }

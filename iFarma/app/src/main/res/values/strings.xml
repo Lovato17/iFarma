@@ -1,18 +1,3 @@
 <resources>
     <string name="app_name">iFarma</string>
-    <string name="TODO">TODO</string>
-    <!--TITULO-->
-    <string name="titulo_login">LOGIN</string>
-    <string name="titulo_cadastro">CADASTRO</string>
-    <!--BOTÕES-->
-    <string name="btn_logar">LOGAR</string>
-    <string name="btn_cadastrar">CADASTRAR</string>
-    <!--DICAS-->
-    <string name="dica_senha">Senha</string>
-    <string name="dica_email">Email</string>
-    <string name="dica_nome">Nome</string>
-    <string name="dica_telefone">Telefone</string>
-    <!--MENSAGENS-->
-    <string name="msg_tem">Já possui uma conta? Logue!</string>
-    <string name="msg_nao_tem">Não possue conta? Cadastre-se!</string>
 </resources>
