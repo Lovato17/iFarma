@@ -12,14 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Carrinho"></activity>
+        <activity android:name=".Carrinho" />
         <activity android:name=".Produtos" />
         <activity android:name=".Drogamaisbrasil" />
         <activity android:name=".Ultrafarma" />
         <activity android:name=".Drogasil" />
         <activity android:name=".inicial" />
         <activity android:name=".Cadastro" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
