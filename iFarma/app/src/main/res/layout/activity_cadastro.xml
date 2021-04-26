@@ -8,22 +8,25 @@
 
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="269dp"
-        android:layout_height="266dp"
+        android:id="@+id/imageView5"
+        android:layout_width="264dp"
+        android:layout_height="270dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:contentDescription="@string/TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/triangulo_cima"
-        android:contentDescription="@string/TODO" />
+        app:srcCompat="@drawable/triangulo_cima" />
 
+    <!--TRIANGULO EM BAIXO-->
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="239dp"
-        android:layout_height="241dp"
+        android:id="@+id/imageView4"
+        android:layout_width="235dp"
+        android:layout_height="238dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -31,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/triangulo_baixo"
-        android:contentDescription="@string/TODO" />
+        android:contentDescription="@string/TODO"  />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,8 +45,8 @@
         <!--LOGO IFARMA-->
         <ImageView
             android:id="@+id/img_logo_ifarma"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="130dp"
+            android:layout_height="114dp"
             android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,8 +54,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.116"
-            app:srcCompat="@drawable/img_logo_ifarma"
-            android:contentDescription="@string/TODO" />
+            app:srcCompat="@drawable/img_logo_ifarma" />
 
         <!--CAMPO NOME-->
         <EditText
@@ -61,7 +63,7 @@
             android:layout_height="44dp"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="@string/dica_nome"
+            android:hint="Nome"
             android:inputType="textPersonName"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_person_icon"
@@ -74,8 +76,7 @@
             app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.305"
-            android:autofillHints="nome" />
+            app:layout_constraintVertical_bias="0.305" />
 
         <!--CAMPO TELEFONE-->
         <EditText
@@ -84,7 +85,7 @@
             android:layout_height="44dp"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="@string/dica_telefone"
+            android:hint="Telefone"
             android:inputType="textPhonetic"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_phone_icon"
@@ -97,8 +98,7 @@
             app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.399"
-            android:autofillHints="@string/dica_telefone" />
+            app:layout_constraintVertical_bias="0.399" />
 
         <!--CAMPO EMAIL-->
         <EditText
@@ -107,7 +107,7 @@
             android:layout_height="44dp"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="@string/dica_email"
+            android:hint="E-mail"
             android:inputType="textEmailAddress"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_email_icon"
@@ -120,8 +120,7 @@
             app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.491"
-            android:autofillHints="@string/dica_email" />
+            app:layout_constraintVertical_bias="0.491" />
 
         <!--CAMPO SENHA-->
         <EditText
@@ -130,7 +129,7 @@
             android:layout_height="42dp"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="@string/dica_senha"
+            android:hint="Senha"
             android:inputType="textPassword"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_lock_icon"
@@ -143,8 +142,7 @@
             app:layout_constraintHorizontal_bias="0.538"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.585"
-            android:autofillHints="@string/dica_senha" />
+            app:layout_constraintVertical_bias="0.585" />
 
         <!--BOTAO CADASTRAR-->
         <Button
@@ -152,7 +150,7 @@
             android:layout_width="286dp"
             android:layout_height="42dp"
             android:layout_marginTop="10dp"
-            android:text="@string/btn_cadastrar"
+            android:text="Cadastrar"
             android:background="@drawable/custom_button"
             android:textColor="#fff"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -169,7 +167,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/msg_tem"
+            android:text="Já possui uma conta? Logue!"
             android:textSize="15sp" />
 
         <!--BOTAO LOGAR-->
@@ -178,7 +176,7 @@
             android:layout_width="286dp"
             android:layout_height="42dp"
             android:layout_marginTop="5dp"
-            android:text="@string/btn_logar"
+            android:text="Logar"
             android:background="@drawable/custom_button"
             android:textColor="#fff"
             app:layout_constraintBottom_toBottomOf="parent"
