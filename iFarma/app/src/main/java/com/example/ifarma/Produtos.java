@@ -29,14 +29,14 @@ public class Produtos extends AppCompatActivity {
     private CheckBox chbxRitmoneuran;
     private CheckBox chbxSimeticona;
 
-    private EditText qtdAllegraa;
-    private EditText qtdBupofrenoo;
-    private EditText qtdEficaciaa;
-    private EditText qtdDorflexx;
-    private EditText qtdLoratamedd;
-    private EditText qtdLuftall;
-    private EditText qtdRitmoneurann;
-    private EditText qtdSimeticonaa;
+    private EditText qtdAllegraTXT;
+    private EditText qtdBupofrenoTXT;
+    private EditText qtdEficaciaTXT;
+    private EditText qtdDorflexTXT;
+    private EditText qtdLoratamedTXT;
+    private EditText qtdLuftalTXT;
+    private EditText qtdRitmoneuranTXT;
+    private EditText qtdSimeticonaTXT;
 
     public static Integer qtdAllegra;
     public static Integer qtdBupofreno;
@@ -56,7 +56,6 @@ public class Produtos extends AppCompatActivity {
     private inicial classe = new inicial();
     private int farmacias = classe.farmacias;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,23 +70,23 @@ public class Produtos extends AppCompatActivity {
         chbxSimeticona = (CheckBox) findViewById(R.id.chbxSimeticona);
 
         //chamando editTexts
-        qtdAllegraa = (EditText) findViewById(R.id.edtqtdAllegra);
-        qtdBupofrenoo = (EditText) findViewById(R.id.edtqtdBupofreno);
-        qtdEficaciaa = (EditText) findViewById(R.id.edtqtdEficacia);
-        qtdDorflexx = (EditText) findViewById(R.id.edtqtdDorflex);
-        qtdLoratamedd = (EditText) findViewById(R.id.edtqtdLoratamed);
-        qtdLuftall = (EditText) findViewById(R.id.edtqtdLuftal);
-        qtdRitmoneurann = (EditText) findViewById(R.id.edtqtdRitmoneuran);
-        qtdSimeticonaa = (EditText) findViewById(R.id.edtqtdSimeticona);
+        qtdAllegraTXT = (EditText) findViewById(R.id.edtqtdAllegra);
+        qtdBupofrenoTXT = (EditText) findViewById(R.id.edtqtdBupofreno);
+        qtdEficaciaTXT = (EditText) findViewById(R.id.edtqtdEficacia);
+        qtdDorflexTXT = (EditText) findViewById(R.id.edtqtdDorflex);
+        qtdLoratamedTXT = (EditText) findViewById(R.id.edtqtdLoratamed);
+        qtdLuftalTXT = (EditText) findViewById(R.id.edtqtdLuftal);
+        qtdRitmoneuranTXT = (EditText) findViewById(R.id.edtqtdRitmoneuran);
+        qtdSimeticonaTXT = (EditText) findViewById(R.id.edtqtdSimeticona);
 
-        qtdAllegraa.setText("1");
-        qtdBupofrenoo.setText("1");
-        qtdEficaciaa.setText("1");
-        qtdDorflexx.setText("1");
-        qtdLoratamedd.setText("1");
-        qtdLuftall.setText("1");
-        qtdRitmoneurann.setText("1");
-        qtdSimeticonaa.setText("1");
+        qtdAllegraTXT.setText("1");
+        qtdBupofrenoTXT.setText("1");
+        qtdEficaciaTXT.setText("1");
+        qtdDorflexTXT.setText("1");
+        qtdLoratamedTXT.setText("1");
+        qtdLuftalTXT.setText("1");
+        qtdRitmoneuranTXT.setText("1");
+        qtdSimeticonaTXT.setText("1");
 
         //chamando imagens
         imgdrogasil = (ImageView) findViewById(R.id.imgfarmadrogasil);
@@ -109,29 +108,38 @@ public class Produtos extends AppCompatActivity {
     }
 
     public void ChecarProdutos() {
+        qtdAllegra = Integer.parseInt(qtdAllegraTXT.getText().toString());
+        qtdBupofreno = Integer.parseInt(qtdBupofrenoTXT.getText().toString());
+        qtdEficacia = Integer.parseInt(qtdEficaciaTXT.getText().toString());
+        qtdDorflex = Integer.parseInt(qtdDorflexTXT.getText().toString());
+        qtdLoratamed = Integer.parseInt(qtdLoratamedTXT.getText().toString());
+        qtdLuftal = Integer.parseInt(qtdLuftalTXT.getText().toString());
+        qtdRitmoneuran = Integer.parseInt(qtdRitmoneuranTXT.getText().toString());
+        qtdSimeticona = Integer.parseInt(qtdSimeticonaTXT.getText().toString());
+
             if (chbxAllegra.isChecked()) {
-                produtosSelecionados.add((String) chbxAllegra.getText());
+                produtosSelecionados.add((String) chbxAllegra.getText() + " - " + qtdAllegra.toString());
             }
             if (chbxBuprofeno.isChecked()) {
-                produtosSelecionados.add((String) chbxBuprofeno.getText());
+                produtosSelecionados.add((String) chbxBuprofeno.getText() + " - " + qtdBupofreno.toString());
             }
             if (chbxDorflex.isChecked()) {
-                produtosSelecionados.add((String) chbxDorflex.getText());
+                produtosSelecionados.add((String) chbxDorflex.getText() + " - " + qtdDorflex.toString());
             }
             if (chbxEficacia.isChecked()) {
-                produtosSelecionados.add((String) chbxEficacia.getText());
+                produtosSelecionados.add((String) chbxEficacia.getText() + " - " + qtdEficacia.toString());
             }
             if (chbxLoratamed.isChecked()) {
-                produtosSelecionados.add((String) chbxLoratamed.getText());
+                produtosSelecionados.add((String) chbxLoratamed.getText() + " - " + qtdLoratamed.toString());
             }
             if (chbxLuftal.isChecked()) {
-                produtosSelecionados.add((String) chbxLuftal.getText());
+                produtosSelecionados.add((String) chbxLuftal.getText() + " - " + qtdLuftal.toString());
             }
             if (chbxRitmoneuran.isChecked()) {
-                produtosSelecionados.add((String) chbxRitmoneuran.getText());
+                produtosSelecionados.add((String) chbxRitmoneuran.getText() + " - " + qtdRitmoneuran.toString());
             }
             if (chbxSimeticona.isChecked()) {
-                produtosSelecionados.add((String) chbxSimeticona.getText());
+                produtosSelecionados.add((String) chbxSimeticona.getText() + " - " + qtdSimeticona.toString());
             }
             if (produtosSelecionados.isEmpty()) {
                 Toast.makeText(Produtos.this, "Nenhum Medicamento Adicionado", Toast.LENGTH_SHORT).show();
@@ -143,15 +151,6 @@ public class Produtos extends AppCompatActivity {
                 chbxDorflex.setChecked(false);
                 chbxBuprofeno.setChecked(false);
                 chbxAllegra.setChecked(false);
-
-                qtdAllegra = Integer.parseInt(qtdAllegraa.getText().toString());
-                qtdBupofreno = Integer.parseInt(qtdBupofrenoo.getText().toString());
-                qtdEficacia = Integer.parseInt(qtdEficaciaa.getText().toString());
-                qtdDorflex = Integer.parseInt(qtdDorflexx.getText().toString());
-                qtdLoratamed = Integer.parseInt(qtdLoratamedd.getText().toString());
-                qtdLuftal = Integer.parseInt(qtdLuftall.getText().toString());
-                qtdRitmoneuran = Integer.parseInt(qtdRitmoneurann.getText().toString());
-                qtdSimeticona = Integer.parseInt(qtdSimeticonaa.getText().toString());
 
                 startActivity(new Intent(Produtos.this, Carrinho.class));
             }

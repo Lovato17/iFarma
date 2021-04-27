@@ -1,7 +1,11 @@
 package com.example.ifarma;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
+
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.util.List;
@@ -11,18 +15,9 @@ public class Carrinho extends AppCompatActivity {
     private Produtos classe = new Produtos();
     private List<String> produtosSelecionados = Produtos.produtosSelecionados;
     private TextView txtProdutos;
-    private String nome;
-    private double preco = 0, precoTotal = 0;
-
-
-    private static Integer qtdAllegra = Integer.parseInt(Produtos.qtdAllegra.toString());
-    private Integer qtdBupofreno = Integer.parseInt(Produtos.qtdBupofreno.toString());
-    private Integer qtdEficacia = Integer.parseInt(Produtos.qtdEficacia.toString());
-    private Integer qtdDorflex = Integer.parseInt(Produtos.qtdDorflex.toString());
-    private Integer qtdLoratamed = Integer.parseInt(Produtos.qtdLoratamed.toString());
-    private Integer qtdLuftal = Integer.parseInt(Produtos.qtdLuftal.toString());
-    private Integer qtdRitmoneuran = Integer.parseInt(Produtos.qtdRitmoneuran.toString());
-    private Integer qtdSimeticona = Integer.parseInt(Produtos.qtdSimeticona.toString());
+    private String nome, resto;
+    private double preco = 0, qtd = 0, precoTotal = 0;
+    private int idTxt = 1, idBtn = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,17 +31,45 @@ public class Carrinho extends AppCompatActivity {
             try {
                 String divisao = " R\\$ ";
                 nome = informacao.split(divisao)[0];
-                preco = Double.parseDouble(informacao.split(divisao)[1]);
-                String ProdutossTXT = (String) ProdutoTXT.getText();
+                resto = informacao.split(divisao)[1];
 
+                divisao = " - ";
+
+                preco = Double.parseDouble(resto.split(divisao)[0]);
+                qtd = Double.parseDouble(resto.split(divisao)[1]);
+
+                String ProdutossTXT = (String) ProdutoTXT.getText();
                 if (ProdutossTXT.contains(nome)){
                 }
                 else{
-                    ProdutoTXT.setText(ProdutoTXT.getText() + "\n" + nome + " ");
-                    if ("qtdDorflex".contains(nome)) {preco *=  qtdDorflex; ProdutoTXT.setText(ProdutoTXT.getText().toString() + qtdDorflex);} if ("qtdAllegra".toString().contains(nome)) {preco *= qtdAllegra; ProdutoTXT.setText(ProdutoTXT.getText().toString() + qtdAllegra);} if ("qtdBupofreno".toString().contains(nome)) {preco *= qtdBupofreno; ProdutoTXT.setText(ProdutoTXT.getText().toString() + qtdBupofreno);} if ("qtdLoratamed".toString().contains(nome)) {preco *= qtdLoratamed; ProdutoTXT.setText(ProdutoTXT.getText().toString() + qtdLoratamed);} if ("qtdLuftal".toString().contains(nome)) {preco *= qtdLuftal; ProdutoTXT.setText(ProdutoTXT.getText().toString() + qtdLuftal);} if ("qtdRitmoneuran".toString().contains(nome)) {preco *= qtdRitmoneuran; ProdutoTXT.setText(ProdutoTXT.getText().toString() + qtdRitmoneuran);} if ("qtdSimeticona".toString().contains(nome)) {preco *= qtdSimeticona; ProdutoTXT.setText(ProdutoTXT.getText().toString() + qtdSimeticona);} if ("qtdEficacia".toString().contains(nome)) {preco *= qtdEficacia; ProdutoTXT.setText(ProdutoTXT.getText().toString() + qtdEficacia);}
-                    ProdutoTXT.setText(ProdutoTXT.getText().toString() + " " + preco);
+                    ConstraintLayout layout = (ConstraintLayout) findViewById(R.id.carrinho);
+                    ConstraintSet set = new ConstraintSet();
+                    set.clone(layout);
+
+                    TextView produto = new TextView(this);
+                    produto.setText("\n Nome - " + nome +  " Preço unitario - " + preco + " Quantidade - " + qtd + " Preço - " + (preco * qtd));
+                    produto.setId(idTxt);           // <-- Important
+                    layout.addView(produto);
+                    set.connect(produto.getId(), ConstraintSet.TOP, idTxt, ConstraintSet.BOTTOM, 15); //Onde ele encosta em cima
+                    set.connect(produto.getId(), ConstraintSet.RIGHT,ConstraintSet.PARENT_ID,ConstraintSet.RIGHT,0); //Onde ele encosta na direita
+                    set.connect(produto.getId(), ConstraintSet.LEFT,ConstraintSet.PARENT_ID, idBtn,0); //Onde ele encosta na esquerda
+                    set.constrainHeight(produto.getId(), 200);
+
+                    //botao
+                    Button button = new Button(this);
+                    button.setText(nome);
+                    button.setId(idBtn);
+                    layout.addView(button);
+                    set.connect(button.getId(), ConstraintSet.TOP, idBtn, ConstraintSet.BOTTOM, 15); //Onde ele encosta em cima
+                    set.connect(button.getId(),ConstraintSet.RIGHT,ConstraintSet.PARENT_ID,ConstraintSet.RIGHT,2); //Onde ele encosta na direita
+                    set.connect(button.getId(),ConstraintSet.LEFT,ConstraintSet.PARENT_ID, idTxt,0); //Onde ele encosta na esquerda
+                    set.constrainHeight(button.getId(), 200);
+
+                    set.applyTo(layout); // Aplica
 
                 precoTotal += preco;
+                idTxt++;
+                idBtn++;
                 }
             }
             catch (Exception erro){
