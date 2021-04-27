@@ -7,7 +7,6 @@
     android:background="#f6f3ff"
     tools:context=".Produtos">
 
-
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="432dp"
@@ -47,7 +46,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-
         tools:ignore="MissingConstraints" />
 
     <ScrollView
@@ -72,9 +70,14 @@
                 android:layout_width="162dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Allegra  R$ 10,00" />
+                android:text="Allegra R$ 10.00" />
 
-
+            <EditText
+                android:id="@+id/edtqtdAllegra"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
 
             <ImageView
                 android:layout_width="174dp"
@@ -87,7 +90,14 @@
                 android:layout_width="163dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="Buprofeno  R$ 7,00" />
+                android:text="Buprofeno R$ 7.00" />
+
+            <EditText
+                android:id="@+id/edtqtdBupofreno"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
 
             <ImageView
                 android:layout_width="174dp"
@@ -95,13 +105,19 @@
                 android:layout_gravity="center"
                 android:background="@drawable/buprofeno" />
 
+            <EditText
+                android:id="@+id/edtqtdDorflex"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
 
             <CheckBox
                 android:id="@+id/chbxDorflex"
                 android:layout_width="153dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Dorflex  R$ 5,00" />
+                android:text="Dorflex R$ 5.00" />
 
             <ImageView
                 android:layout_width="174dp"
@@ -109,12 +125,19 @@
                 android:layout_gravity="center"
                 android:background="@drawable/dorflex" />
 
+            <EditText
+                android:id="@+id/edtqtdEficacia"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
             <CheckBox
                 android:id="@+id/chbxEficacia"
                 android:layout_width="161dp"
                 android:layout_height="27dp"
                 android:layout_gravity="center"
-                android:text="Eficacia  R$ 15,00" />
+                android:text="Eficacia R$ 15.00" />
 
 
             <ImageView
@@ -123,12 +146,19 @@
                 android:layout_gravity="center"
                 android:background="@drawable/eficacia" />
 
+            <EditText
+                android:id="@+id/edtqtdLoratamed"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
             <CheckBox
                 android:id="@+id/chbxLoratamed"
                 android:layout_width="183dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="Loratamed  R$ 8,00" />
+                android:text="Loratamed R$ 8.00" />
 
             <ImageView
                 android:layout_width="174dp"
@@ -136,12 +166,19 @@
                 android:layout_gravity="center"
                 android:background="@drawable/loratamed" />
 
+            <EditText
+                android:id="@+id/edtqtdLuftal"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
             <CheckBox
                 android:id="@+id/chbxLuftal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Luftal  R$ 10,00" />
+                android:text="Luftal R$ 10.00" />
 
             <ImageView
                 android:layout_width="174dp"
@@ -149,12 +186,19 @@
                 android:layout_gravity="center"
                 android:background="@drawable/luftal" />
 
+            <EditText
+                android:id="@+id/edtqtdRitmoneuran"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
             <CheckBox
                 android:id="@+id/chbxRitmoneuran"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Ritmoneuran  R$ 12,00" />
+                android:text="Ritmoneuran R$ 12.00" />
 
             <ImageView
                 android:layout_width="174dp"
@@ -162,12 +206,19 @@
                 android:layout_gravity="center"
                 android:background="@drawable/ritmoneuran" />
 
+            <EditText
+                android:id="@+id/edtqtdSimeticona"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
             <CheckBox
                 android:id="@+id/chbxSimeticona"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Simeticona  R$ 10,00" />
+                android:text="Simeticona R$ 10.00" />
 
             <ImageView
                 android:layout_width="174dp"
