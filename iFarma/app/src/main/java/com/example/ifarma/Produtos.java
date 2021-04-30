@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Produtos extends AppCompatActivity {
+
     private Button btnAdd;
 
     private CheckBox chbxAllegra;
@@ -52,7 +53,6 @@ public class Produtos extends AppCompatActivity {
     public static ImageView imgdrogasil;
     public static ImageView imgultrafarma;
     public static ImageView imgdrogamais;
-    public static double total;
 
     private inicial classe = new inicial();
     private int farmacias = classe.farmacias;
@@ -95,7 +95,6 @@ public class Produtos extends AppCompatActivity {
         imgdrogamais = (ImageView) findViewById(R.id.imgdrogamais);
 
         apacererImagem();
-        CheckedTrue();
 
         btnAdd = findViewById(R.id.btnadd);
 
@@ -104,20 +103,6 @@ public class Produtos extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ChecarProdutos();
-                if (produtosSelecionados.isEmpty()) {
-                    Toast.makeText(Produtos.this, "Nenhum Medicamento Adicionado", Toast.LENGTH_SHORT).show();
-                } else {
-                    chbxSimeticona.setChecked(false);
-                    chbxRitmoneuran.setChecked(false);
-                    chbxLuftal.setChecked(false);
-                    chbxLoratamed.setChecked(false);
-                    chbxDorflex.setChecked(false);
-                    chbxBuprofeno.setChecked(false);
-                    chbxAllegra.setChecked(false);
-
-                    startActivity(new Intent(Produtos.this, Carrinho.class));
-                }
-
             }
         });
     }
@@ -131,107 +116,44 @@ public class Produtos extends AppCompatActivity {
         qtdLuftal = Integer.parseInt(qtdLuftalTXT.getText().toString());
         qtdRitmoneuran = Integer.parseInt(qtdRitmoneuranTXT.getText().toString());
         qtdSimeticona = Integer.parseInt(qtdSimeticonaTXT.getText().toString());
-        double a,b,d,e,lo,lu,r,s ;
 
-            if (chbxAllegra.isChecked()) {
-                produtosSelecionados.add((String) chbxAllegra.getText() + " - " + qtdAllegra.toString());
-            }
-            if (chbxBuprofeno.isChecked()) {
-                produtosSelecionados.add((String) chbxBuprofeno.getText() + " - " + qtdBupofreno.toString());
-            }
-            if (chbxDorflex.isChecked()) {
-                produtosSelecionados.add((String) chbxDorflex.getText() + " - " + qtdDorflex.toString());
-            }
-            if (chbxEficacia.isChecked()) {
-                produtosSelecionados.add((String) chbxEficacia.getText() + " - " + qtdEficacia.toString());
-            }
-            if (chbxLoratamed.isChecked()) {
-                produtosSelecionados.add((String) chbxLoratamed.getText() + " - " + qtdLoratamed.toString());
-            }
-            if (chbxLuftal.isChecked()) {
-                produtosSelecionados.add((String) chbxLuftal.getText() + " - " + qtdLuftal.toString());
-            }
-            if (chbxRitmoneuran.isChecked()) {
-                produtosSelecionados.add((String) chbxRitmoneuran.getText() + " - " + qtdRitmoneuran.toString());
-            }
-            if (chbxSimeticona.isChecked()) {
-                produtosSelecionados.add((String) chbxSimeticona.getText() + " - " + qtdSimeticona.toString());
-            }
-
-    }
-    public void CheckedTrue(){
-        double a,b,d,e,lo,lu,r,s ;
-        {
-            if (chbxAllegra.isChecked()){
-
-                a=10*qtdAllegra;
-
-            }
-            else
-            {
-                a=0;
-            }}
-        {
-            if(chbxBuprofeno.isChecked()){
-                b=7*qtdBupofreno;
-            }
-            else {
-                b=0;
-            }}
-        {
-            if (chbxDorflex.isChecked()) {
-                d = 5*qtdDorflex;
-            } else {
-                d = 0;
-            }
+        if (chbxAllegra.isChecked()) {
+            produtosSelecionados.add((String) chbxAllegra.getText() + " - " + qtdAllegra.toString());
         }
-        {
-            if (chbxEficacia.isChecked()){
-                e=15*qtdEficacia;
-            }
-            else{
-                e=0;
-            }
+        if (chbxBuprofeno.isChecked()) {
+            produtosSelecionados.add((String) chbxBuprofeno.getText() + " - " + qtdBupofreno.toString());
         }
-        {
-            if(chbxLoratamed.isChecked()){
-                lo=8*qtdLoratamed;
-            }
-            else{
-                lo=0;
-            }}
-        {
-            if (chbxLuftal.isChecked()){
-                lu=10*qtdLuftal;
-            }
-            else{
-                lu=0;
-            }}
-        {
-            if (chbxRitmoneuran.isChecked()){
-                r=12*qtdRitmoneuran;
-
-            }
-            else{
-                r=0;
-            }
-            if (chbxSimeticona.isChecked()){
-                s=10*qtdSimeticona;
-            }
-            else{
-                s=0;
-            }
+        if (chbxDorflex.isChecked()) {
+            produtosSelecionados.add((String) chbxDorflex.getText() + " - " + qtdDorflex.toString());
         }
+        if (chbxEficacia.isChecked()) {
+            produtosSelecionados.add((String) chbxEficacia.getText() + " - " + qtdEficacia.toString());
+        }
+        if (chbxLoratamed.isChecked()) {
+            produtosSelecionados.add((String) chbxLoratamed.getText() + " - " + qtdLoratamed.toString());
+        }
+        if (chbxLuftal.isChecked()) {
+            produtosSelecionados.add((String) chbxLuftal.getText() + " - " + qtdLuftal.toString());
+        }
+        if (chbxRitmoneuran.isChecked()) {
+            produtosSelecionados.add((String) chbxRitmoneuran.getText() + " - " + qtdRitmoneuran.toString());
+        }
+        if (chbxSimeticona.isChecked()) {
+            produtosSelecionados.add((String) chbxSimeticona.getText() + " - " + qtdSimeticona.toString());
+        }
+        if (produtosSelecionados.isEmpty()) {
+            Toast.makeText(Produtos.this, "Nenhum Medicamento Adicionado", Toast.LENGTH_SHORT).show();
+        } else {
+            chbxSimeticona.setChecked(false);
+            chbxRitmoneuran.setChecked(false);
+            chbxLuftal.setChecked(false);
+            chbxLoratamed.setChecked(false);
+            chbxDorflex.setChecked(false);
+            chbxBuprofeno.setChecked(false);
+            chbxAllegra.setChecked(false);
 
-
-
-
-
-
-        total=a+b+d+e+lo+lu+r+s;
-
-
-
+            startActivity(new Intent(Produtos.this, Carrinho.class));
+        }
     }
 
     public void apacererImagem() {

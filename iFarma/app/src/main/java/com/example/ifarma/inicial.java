@@ -14,19 +14,13 @@ public class inicial extends AppCompatActivity {
 
     private Button Drogasil;
     private Button Ultrafarma;
+    private Button Logout;
     private Button Drogamais;
     private Button btndrogasil;
     private Button btnult;
     private Button btndrogmais;
     public static int farmacias;
 
-    //ligando as imagens da outra tela
-   /*/private Produtos imgdgm = new Produtos();
-    private ImageView imgdrogamais=imgdgm.imgdrogamais;
-    private Produtos imgult = new Produtos();
-    private ImageView imgultrafarma=imgult.imgultrafarma;
-    private Produtos imgdrs = new Produtos();
-    private ImageView imgdrogasil=imgdrs.imgdrogasil;/*/
 
 
 
@@ -39,21 +33,26 @@ public class inicial extends AppCompatActivity {
 
 
         //DECLARANDO OS BOTOES
-
+        Logout = (Button)findViewById(R.id.btnLogout);
         Drogasil=(Button)findViewById(R.id.btn_drograsil);
         Ultrafarma=(Button)findViewById(R.id.btn_ultrafarma);
         Drogamais=(Button)findViewById(R.id.btn_drogamais);
         btndrogasil=(Button)findViewById(R.id.btndg);
 
 
+        Logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               startActivity(new Intent(inicial.this, MainActivity.class));
 
+            }
+        });
 
 
         btndrogasil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 farmacias= 1;
-
                 irparatelaproduto();
             }
         });
@@ -65,7 +64,6 @@ public class inicial extends AppCompatActivity {
 
 
                farmacias= 2;
-
                 irparatelaproduto();
             }
         });
@@ -75,14 +73,9 @@ public class inicial extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 farmacias= 3;
-
             irparatelaproduto();
             }
         });
-
-
-
-
 
         //LEVA PARA A TELA AONDE HÁ O WEBVIEW DA DROGASIL
         Drogasil.setOnClickListener(new Button.OnClickListener(){

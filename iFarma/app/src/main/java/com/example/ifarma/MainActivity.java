@@ -45,16 +45,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                irparatelainicial(); //Cortei atalho para debug mais facil, desculpa se esqueci de tirar as // ;--;
-//                if (edtemail.getText().toString().isEmpty() || edtsenha.getText().toString().isEmpty()) {
-  //                  Toast.makeText(MainActivity.this, "EXISTEM CAMPOS EM BRANCOS", Toast.LENGTH_SHORT).show();
-    //            }
-      //          else {
-        //            //METODO PARA RECEBER AS INFORMAÇOES DO BANCO DE DADOS
-          //          receberinfo();
-            //        //METODO PARA VER SE A SENHA E O EMAIL REALMENTE ESTAO CADASTRADOS, E REALIZAR OS PROXIMOS PASSOS
-              //      logar();
-                //}
+
+           if (edtemail.getText().toString().isEmpty() || edtsenha.getText().toString().isEmpty()) {
+                   Toast.makeText(MainActivity.this, "EXISTEM CAMPOS EM BRANCOS", Toast.LENGTH_SHORT).show();
+               }
+               else {
+                   //METODO PARA RECEBER AS INFORMAÇOES DO BANCO DE DADOS
+                receberinfo();
+                    //METODO PARA VER SE A SENHA E O EMAIL REALMENTE ESTAO CADASTRADOS, E REALIZAR OS PROXIMOS PASSOS
+                  logar();
+                }
             }
         });
         //METODO PARA IR PARA A TELA DE CADASTRO
