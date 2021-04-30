@@ -4,100 +4,207 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="#f6f3ff"
     tools:context=".inicial">
 
-
-    <Button
-        android:id="@+id/btn_drogamais"
-        android:layout_width="280dp"
-        android:layout_height="47dp"
-        android:text="Droga mais Brasil"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.462"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btn_drograsil"
-        android:layout_width="276dp"
-        android:layout_height="44dp"
-        android:text="Drogasil"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btn_ultrafarma"
-        android:layout_width="279dp"
-        android:layout_height="46dp"
-        android:text="Ultrafarma"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <!--TOPO-->
+    <RelativeLayout
+        android:id="@+id/div_topo_farmacia"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tela de Farmacias/mercadorias"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125" />
+        android:background="#d22"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints">
 
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/img_logo_ifarma"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/lblTituloFarmacias"/>
+
+        <TextView
+            android:id="@+id/lblTituloFarmacias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ddd"
+            android:textStyle="bold"
+            android:text="Farmácias"
+            android:fontFamily="casual"
+            android:layout_margin="5dp"
+            android:textSize="30dp" />
+    </RelativeLayout>
+
+    <!--DIV DROGASIL-->
+    <RelativeLayout
+        android:id="@+id/divDrogasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_div_remedio"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/div_topo_farmacia"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:id="@+id/img_farm_drogasil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/drogasil"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true" />
+
+        <Button
+            android:id="@+id/btn_drograsil"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_farm_drogasil"
+            android:text="Ver no mapa"
+            android:padding="10dp"
+            android:background="@drawable/custom_button"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:id="@+id/btndg"
+            android:layout_width="36dp"
+            android:layout_height="34dp"
+            android:background="@drawable/carrinho"
+            android:onClick="drogasil"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_drograsil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.891"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.303"
+            tools:ignore="MissingConstraints,OnClick" />
+    </RelativeLayout>
+
+    <!--DIV ULTRAFARMA-->
+    <RelativeLayout
+        android:id="@+id/divUltra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_div_remedio"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/divDrogasil" >
+
+        <ImageView
+            android:id="@+id/img_farm_ultra"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ultrafarma">
+
+        </ImageView>
+
+        <Button
+            android:id="@+id/btn_ultrafarma"
+            android:layout_width="200dp"
+            android:layout_height="46dp"
+            android:text="Ver no mapa"
+            android:padding="10dp"
+            android:layout_toRightOf="@id/img_farm_ultra"
+            android:background="@drawable/custom_button"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:layout_margin="10dp"  />
+
+        <Button
+            android:id="@+id/btnult"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
+            android:background="@drawable/carrinho"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_ultrafarma"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.891"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.303"
+            tools:ignore="MissingConstraints,OnClick" />
+
+    </RelativeLayout>
+
+    <!--DIV DROGA MAIS BRASIL-->
+    <RelativeLayout
+        android:id="@+id/divDrogaMais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_div_remedio"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/divUltra">
+
+        <ImageView
+            android:id="@+id/img_farm_drogamais"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/droga_mais"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true" />
+
+
+        <Button
+            android:id="@+id/btn_drogamais"
+            android:layout_width="200dp"
+            android:layout_height="46dp"
+            android:text="Ver no mapa"
+            android:padding="10dp"
+            android:layout_toRightOf="@id/img_farm_drogamais"
+            android:background="@drawable/custom_button"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:layout_margin="10dp"   />
+
+        <Button
+            android:id="@+id/btndrogmais"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
+            android:background="@drawable/carrinho"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_drogamais"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.891"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.303" />
+
+    </RelativeLayout>
+
+    <!--BOTAO LOGOUT-->
     <Button
-        android:id="@+id/btndg"
-        android:layout_width="36dp"
-        android:layout_height="34dp"
-        android:onClick="drogasil"
-        android:background="@drawable/carrinho"
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:text="Logout"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btnult"
-        android:layout_width="36dp"
-        android:layout_height="30dp"
-        android:background="@drawable/carrinho"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btndrogmais"
-        android:layout_width="36dp"
-        android:layout_height="34dp"
-        android:background="@drawable/carrinho"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452"
-        tools:ignore="MissingConstraints" />
-
-
+        app:layout_constraintVertical_bias="1.0"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

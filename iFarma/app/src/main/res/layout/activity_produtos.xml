@@ -7,266 +7,468 @@
     android:background="#f6f3ff"
     tools:context=".Produtos">
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="432dp"
-        android:layout_height="62dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnadd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.809"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/topo" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+    <!--TOPO-->
+    <RelativeLayout
+        android:id="@+id/divTopo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Produtos"
-        android:textColor="#FFF"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011"
-        tools:ignore="MissingConstraints" />
+        android:background="#dd2222"
+        tools:ignore="MissingConstraints">
 
-    <Button
-        android:id="@+id/btnadd"
-        android:layout_width="418dp"
-        android:layout_height="60dp"
-        android:background="#FCB69F"
-        android:text="Adicionar ao Carrinho"
-        android:textColor="#fff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+        <!--LOGO DAS FARMACIAS-->
+        <ImageView
+            android:id="@+id/imgdrogamais"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/droga_mais"/>
+
+        <ImageView
+            android:id="@+id/imgultrafarma"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ultrafarma"/>
+
+        <ImageView
+            android:id="@+id/imgfarmadrogasil"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/drogasil"
+            android:layout_centerVertical="true"/>
+
+        <!--TITULO-->
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ddd"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:text="Remedios"
+            android:fontFamily="casual"
+            android:layout_margin="5dp"
+            android:textSize="25sp"/>
+
+    </RelativeLayout>
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="303dp"
-        android:layout_height="588dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.13"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@+id/divTopo">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            <CheckBox
-                android:id="@+id/chbxAllegra"
-                android:layout_width="162dp"
+            <LinearLayout
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Allegra R$ 10.00" />
+                android:background="@drawable/custom_div_remedio"
+                android:gravity="center"
+                android:margin="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <EditText
-                android:id="@+id/edtqtdAllegra"
-                android:layout_width="150dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Allegra"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/allegra" />
+
+                <EditText
+                    android:id="@+id/edtqtdAllegra"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:hint="Quantidade"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+                <CheckBox
+                    android:id="@+id/chbxAllegra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Allegra R$ 10.00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_div_remedio"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Ibuprofeno"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="174dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/buprofeno" />
+
+                <EditText
+                    android:id="@+id/edtqtdBupofreno"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:hint="Quantidade"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+                <CheckBox
+                    android:id="@+id/chbxBuprofeno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buprofeno R$ 7.00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
+                android:background="@drawable/custom_div_remedio"
+                android:gravity="center"
+                android:margin="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <ImageView
-                android:layout_width="174dp"
-                android:layout_height="172dp"
-                android:layout_gravity="center"
-                android:background="@drawable/allegra" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Dorflex"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-            <CheckBox
-                android:id="@+id/chbxBuprofeno"
-                android:layout_width="163dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:text="Buprofeno R$ 7.00" />
+                <ImageView
+                    android:layout_width="174dp"
+                    android:layout_height="122dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/dorflex" />
 
-            <EditText
-                android:id="@+id/edtqtdBupofreno"
-                android:layout_width="150dp"
+                <EditText
+                    android:id="@+id/edtqtdDorflex"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:hint="Quantidade"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+                <CheckBox
+                    android:id="@+id/chbxDorflex"
+                    android:layout_width="153dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Dorflex R$ 5.00" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
+                android:background="@drawable/custom_div_remedio"
+                android:gravity="center"
+                android:margin="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <ImageView
-                android:layout_width="174dp"
-                android:layout_height="172dp"
-                android:layout_gravity="center"
-                android:background="@drawable/buprofeno" />
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Eficacia"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/edtqtdDorflex"
-                android:layout_width="150dp"
+                <ImageView
+                    android:layout_width="174dp"
+                    android:layout_height="168dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/eficacia" />
+
+                <EditText
+                    android:id="@+id/edtqtdEficacia"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:hint="Quantidade"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+                <CheckBox
+                    android:id="@+id/chbxEficacia"
+                    android:layout_width="161dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    android:text="Eficacia R$ 15.00" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
+                android:background="@drawable/custom_div_remedio"
+                android:gravity="center"
+                android:margin="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <CheckBox
-                android:id="@+id/chbxDorflex"
-                android:layout_width="153dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Loratamed"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="174dp"
+                    android:layout_height="168dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/loratamed" />
+
+                <EditText
+                    android:id="@+id/edtqtdLoratamed"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:hint="Quantidade"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+                <CheckBox
+                    android:id="@+id/chbxLoratamed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Loratamed R$ 8.00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Dorflex R$ 5.00" />
+                android:background="@drawable/custom_div_remedio"
+                android:gravity="center"
+                android:margin="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <ImageView
-                android:layout_width="174dp"
-                android:layout_height="168dp"
-                android:layout_gravity="center"
-                android:background="@drawable/dorflex" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Luftal"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/edtqtdEficacia"
-                android:layout_width="150dp"
+                <ImageView
+                    android:layout_width="136dp"
+                    android:layout_height="123dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/luftal" />
+
+                <EditText
+                    android:id="@+id/edtqtdLuftal"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:hint="Quantidade"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+                <CheckBox
+                    android:id="@+id/chbxLuftal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Luftal R$ 10.00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
+                android:background="@drawable/custom_div_remedio"
+                android:gravity="center"
+                android:margin="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <CheckBox
-                android:id="@+id/chbxEficacia"
-                android:layout_width="161dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center"
-                android:text="Eficacia R$ 15.00" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Luftal"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
+                <ImageView
+                    android:layout_width="174dp"
+                    android:layout_height="168dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ritmoneuran" />
 
-            <ImageView
-                android:layout_width="174dp"
-                android:layout_height="168dp"
-                android:layout_gravity="center"
-                android:background="@drawable/eficacia" />
+                <EditText
+                    android:id="@+id/edtqtdRitmoneuran"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:hint="Quantidade"
+                    android:inputType="number"
+                    android:padding="5dp" />
 
-            <EditText
-                android:id="@+id/edtqtdLoratamed"
-                android:layout_width="150dp"
+                <CheckBox
+                    android:id="@+id/chbxRitmoneuran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Ritmoneuran R$ 12.00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
+                android:background="@drawable/custom_div_remedio"
+                android:gravity="center"
+                android:margin="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <CheckBox
-                android:id="@+id/chbxLoratamed"
-                android:layout_width="183dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:text="Loratamed R$ 8.00" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Simeticona"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-            <ImageView
-                android:layout_width="174dp"
-                android:layout_height="168dp"
-                android:layout_gravity="center"
-                android:background="@drawable/loratamed" />
+                <ImageView
+                    android:layout_width="174dp"
+                    android:layout_height="168dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/simeticona" />
 
-            <EditText
-                android:id="@+id/edtqtdLuftal"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
+                <EditText
+                    android:id="@+id/edtqtdSimeticona"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:hint="Quantidade"
+                    android:inputType="number"
+                    android:padding="5dp" />
 
-            <CheckBox
-                android:id="@+id/chbxLuftal"
+                <CheckBox
+                    android:id="@+id/chbxSimeticona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Simeticona R$ 10.00" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Luftal R$ 10.00" />
+                android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="174dp"
-                android:layout_height="168dp"
-                android:layout_gravity="center"
-                android:background="@drawable/luftal" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
-            <EditText
-                android:id="@+id/edtqtdRitmoneuran"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
-            <CheckBox
-                android:id="@+id/chbxRitmoneuran"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Ritmoneuran R$ 12.00" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
-            <ImageView
-                android:layout_width="174dp"
-                android:layout_height="168dp"
-                android:layout_gravity="center"
-                android:background="@drawable/ritmoneuran" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
-            <EditText
-                android:id="@+id/edtqtdSimeticona"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
-
-            <CheckBox
-                android:id="@+id/chbxSimeticona"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Simeticona R$ 10.00" />
-
-            <ImageView
-                android:layout_width="174dp"
-                android:layout_height="168dp"
-                android:layout_gravity="center"
-                android:background="@drawable/simeticona" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
-    <ImageView
-        android:id="@+id/imgfarmadrogasil"
-        android:layout_width="90dp"
-        android:layout_height="47dp"
-        android:visibility="invisible"
+    <Button
+        android:id="@+id/btnadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:text="Adicionar ao Carrinho"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011"
-        app:srcCompat="@drawable/drogasil" />
-
-    <ImageView
-        android:id="@+id/imgultrafarma"
-        android:layout_width="87dp"
-        android:layout_height="47dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011"
-        app:srcCompat="@drawable/ultrafarma" />
-
-    <ImageView
-        android:id="@+id/imgdrogamais"
-        android:layout_width="78dp"
-        android:layout_height="48dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011"
-        app:srcCompat="@drawable/droga_mais" />
-
+        app:layout_constraintVertical_bias="1.0"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

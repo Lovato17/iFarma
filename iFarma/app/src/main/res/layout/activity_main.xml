@@ -18,7 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/triangulo_cima" />
+        app:srcCompat="@drawable/triangulo_cima"
+        android:contentDescription="@string/TODO" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -30,16 +31,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/triangulo_baixo" />
+        app:srcCompat="@drawable/triangulo_baixo"
+        android:contentDescription="@string/TODO" />
 
-
-
-        <!--LOGO IFARMA-->
-
-    <!--TITULO-->
-
-        <!--CAMPO DE EMAIL-->
-
+    <!--LOGO IFARMA-->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="123dp"
@@ -52,12 +47,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.143" />
 
-    <!--CAMPO DE SENHA-->
-
-    <!--BOTÃO DE LOGAR-->
-
-    <!--MENSAGEM NAO TEM CONTA-->
-
+    <!--TITULO-->
     <TextView
         android:id="@+id/lblTituloLogin"
         android:layout_width="wrap_content"
@@ -71,12 +61,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.311" />
 
+    <!--CAMPO EMAIL-->
     <EditText
         android:id="@+id/email"
         android:layout_width="302dp"
         android:layout_height="37dp"
         android:layout_marginTop="60dp"
-
         android:autofillHints="email@email.com"
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/custom_email_icon"
@@ -94,8 +84,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.359" />
 
-    <!--BOTÃO DE CADASTRAR-->
-
+    <!--CAMPO DE SENHA-->
     <EditText
         android:id="@+id/senha"
         android:layout_width="303dp"
@@ -117,6 +106,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
+    <!--BOTÃO DE LOGAR-->
     <Button
         android:id="@+id/btn_logar"
         android:layout_width="301dp"
@@ -132,6 +122,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.585" />
 
+
+    <!--MENSAGEM NAO TEM CONTA-->
     <TextView
         android:id="@+id/lblMsgNaoTem"
         android:layout_width="wrap_content"
@@ -143,6 +135,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.65" />
 
+
+    <!--BOTÃO DE CADASTRAR-->
     <Button
         android:id="@+id/bt_cadastrar"
         android:layout_width="295dp"
