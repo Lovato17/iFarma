@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_div_remedio"
                 android:gravity="center"
-                android:margin="5dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical"
                 android:padding="10dp">
 
@@ -162,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_div_remedio"
                 android:gravity="center"
-                android:margin="5dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical"
                 android:padding="10dp">
 
@@ -207,7 +207,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_div_remedio"
                 android:gravity="center"
-                android:margin="5dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical"
                 android:padding="10dp">
 
@@ -252,7 +252,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_div_remedio"
                 android:gravity="center"
-                android:margin="5dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical"
                 android:padding="10dp">
 
@@ -295,7 +295,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_div_remedio"
                 android:gravity="center"
-                android:margin="5dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical"
                 android:padding="10dp">
 
@@ -337,7 +337,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_div_remedio"
                 android:gravity="center"
-                android:margin="5dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical"
                 android:padding="10dp">
 
@@ -380,7 +380,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_div_remedio"
                 android:gravity="center"
-                android:margin="5dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical"
                 android:padding="10dp">
 

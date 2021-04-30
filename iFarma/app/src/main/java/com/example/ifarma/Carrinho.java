@@ -17,16 +17,20 @@ public class Carrinho extends AppCompatActivity {
     private Produtos classe = new Produtos();
     private List<String> produtosSelecionados = Produtos.produtosSelecionados;
     private TextView txtProdutos;
+
     private String nome, resto;
     private double preco = 0, qtd = 0, precoTotal = 0;
     private int idTxt = 1, idBtn = 1;
     private Button btn_voltar_produtos;
+    private Produtos vltotal = new Produtos();
+    private Double total=vltotal.total;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carrinho);
-
+        final EditText valor = (EditText) findViewById(R.id.edttotal);
 
         btn_voltar_produtos=(Button)findViewById(R.id.btn_voltar_produtos);
         btn_voltar_produtos.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +83,7 @@ public class Carrinho extends AppCompatActivity {
                     set.applyTo(layout); // Aplica
 
                 precoTotal += preco;
+                    valor.setText("R$ "+total);
                 idTxt++;
                 idBtn++;
                 }

@@ -52,6 +52,7 @@ public class Produtos extends AppCompatActivity {
     public static ImageView imgdrogasil;
     public static ImageView imgultrafarma;
     public static ImageView imgdrogamais;
+    public static double total;
 
     private inicial classe = new inicial();
     private int farmacias = classe.farmacias;
@@ -94,6 +95,7 @@ public class Produtos extends AppCompatActivity {
         imgdrogamais = (ImageView) findViewById(R.id.imgdrogamais);
 
         apacererImagem();
+        CheckedTrue();
 
         btnAdd = findViewById(R.id.btnadd);
 
@@ -102,7 +104,20 @@ public class Produtos extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ChecarProdutos();
-                startActivity(new Intent(Produtos.this, Carrinho.class));
+                if (produtosSelecionados.isEmpty()) {
+                    Toast.makeText(Produtos.this, "Nenhum Medicamento Adicionado", Toast.LENGTH_SHORT).show();
+                } else {
+                    chbxSimeticona.setChecked(false);
+                    chbxRitmoneuran.setChecked(false);
+                    chbxLuftal.setChecked(false);
+                    chbxLoratamed.setChecked(false);
+                    chbxDorflex.setChecked(false);
+                    chbxBuprofeno.setChecked(false);
+                    chbxAllegra.setChecked(false);
+
+                    startActivity(new Intent(Produtos.this, Carrinho.class));
+                }
+
             }
         });
     }
@@ -116,6 +131,7 @@ public class Produtos extends AppCompatActivity {
         qtdLuftal = Integer.parseInt(qtdLuftalTXT.getText().toString());
         qtdRitmoneuran = Integer.parseInt(qtdRitmoneuranTXT.getText().toString());
         qtdSimeticona = Integer.parseInt(qtdSimeticonaTXT.getText().toString());
+        double a,b,d,e,lo,lu,r,s ;
 
             if (chbxAllegra.isChecked()) {
                 produtosSelecionados.add((String) chbxAllegra.getText() + " - " + qtdAllegra.toString());
@@ -141,19 +157,81 @@ public class Produtos extends AppCompatActivity {
             if (chbxSimeticona.isChecked()) {
                 produtosSelecionados.add((String) chbxSimeticona.getText() + " - " + qtdSimeticona.toString());
             }
-            if (produtosSelecionados.isEmpty()) {
-                Toast.makeText(Produtos.this, "Nenhum Medicamento Adicionado", Toast.LENGTH_SHORT).show();
-            } else {
-                chbxSimeticona.setChecked(false);
-                chbxRitmoneuran.setChecked(false);
-                chbxLuftal.setChecked(false);
-                chbxLoratamed.setChecked(false);
-                chbxDorflex.setChecked(false);
-                chbxBuprofeno.setChecked(false);
-                chbxAllegra.setChecked(false);
 
-                startActivity(new Intent(Produtos.this, Carrinho.class));
+    }
+    public void CheckedTrue(){
+        double a,b,d,e,lo,lu,r,s ;
+        {
+            if (chbxAllegra.isChecked()){
+
+                a=10*qtdAllegra;
+
             }
+            else
+            {
+                a=0;
+            }}
+        {
+            if(chbxBuprofeno.isChecked()){
+                b=7*qtdBupofreno;
+            }
+            else {
+                b=0;
+            }}
+        {
+            if (chbxDorflex.isChecked()) {
+                d = 5*qtdDorflex;
+            } else {
+                d = 0;
+            }
+        }
+        {
+            if (chbxEficacia.isChecked()){
+                e=15*qtdEficacia;
+            }
+            else{
+                e=0;
+            }
+        }
+        {
+            if(chbxLoratamed.isChecked()){
+                lo=8*qtdLoratamed;
+            }
+            else{
+                lo=0;
+            }}
+        {
+            if (chbxLuftal.isChecked()){
+                lu=10*qtdLuftal;
+            }
+            else{
+                lu=0;
+            }}
+        {
+            if (chbxRitmoneuran.isChecked()){
+                r=12*qtdRitmoneuran;
+
+            }
+            else{
+                r=0;
+            }
+            if (chbxSimeticona.isChecked()){
+                s=10*qtdSimeticona;
+            }
+            else{
+                s=0;
+            }
+        }
+
+
+
+
+
+
+        total=a+b+d+e+lo+lu+r+s;
+
+
+
     }
 
     public void apacererImagem() {

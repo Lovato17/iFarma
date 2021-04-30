@@ -10,90 +10,112 @@
 
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/div_topo_carrinho"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="MissingConstraints">
+        android:layout_height="wrap_content"
+        android:background="#dd2222"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-        <RelativeLayout
-            android:id="@+id/div_topo_carrinho"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#dd2222"
-            android:padding="10dp">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/lblTituloCarrinho"
+            android:src="@drawable/ic_shopping_cart" />
 
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/ic_shopping_cart"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/lblTituloCarrinho" />
-
-            <TextView
-                android:id="@+id/lblTituloCarrinho"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:textColor="#ddd"
-                android:textStyle="bold"
-                android:text="Carrinho"
-                android:fontFamily="casual"
-                android:layout_margin="5dp"
-                android:textSize="25sp" />
-        </RelativeLayout>
-
-
-        <EditText
-            android:id="@+id/edttotal"
+        <TextView
+            android:id="@+id/lblTituloCarrinho"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_below="@+id/div_topo_carrinho"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            android:hint="Preço total"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/custom_input" />
-
-        <CheckedTextView
-            android:id="@+id/txtProdutos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edttotal"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
-            android:textSize="15sp"
-            android:text="produtos" />
-
-        <Button
-            android:id="@+id/btn_voltar_produtos"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/custom_button"
-            android:text="Voltar"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
             android:fontFamily="casual"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true" />
-
-        <Button
-            android:id="@+id/btn_finalizar"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="10dp"
-            android:fontFamily="casual"
-            android:background="@drawable/custom_button"
-            android:text="Finalizar"
-            android:textColor="@color/white"
+            android:text="Carrinho"
+            android:textColor="#ddd"
+            android:textSize="25sp"
             android:textStyle="bold" />
-
     </RelativeLayout>
 
+    <EditText
+        android:id="@+id/edttotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/div_topo_carrinho"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_input"
+        android:hint="Preço total"
+        android:padding="10dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <TextView
+        android:id="@+id/txtProdutos"
+        android:layout_width="401dp"
+        android:layout_height="295dp"
+        android:layout_below="@+id/edttotal"
+        android:layout_centerHorizontal="true"
+        android:text="produtos"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/btn_voltar_produtos"
+        android:layout_width="174dp"
+        android:layout_height="47dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_button"
+        android:fontFamily="casual"
+        android:text="Voltar"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <Button
+        android:id="@+id/btn_finalizar"
+        android:layout_width="173dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="casual"
+        android:text="Finalizar"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
