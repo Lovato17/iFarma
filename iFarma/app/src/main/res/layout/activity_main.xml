@@ -35,6 +35,21 @@
         android:contentDescription="@string/TODO" />
 
     <!--LOGO IFARMA-->
+
+    <!--TITULO-->
+
+    <!--CAMPO EMAIL-->
+
+    <!--CAMPO DE SENHA-->
+
+    <!--BOTÃO DE LOGAR-->
+
+
+    <!--MENSAGEM NAO TEM CONTA-->
+
+
+    <!--BOTÃO DE CADASTRAR-->
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="123dp"
@@ -45,9 +60,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.143" />
+        app:layout_constraintVertical_bias="0.165" />
 
-    <!--TITULO-->
     <TextView
         android:id="@+id/lblTituloLogin"
         android:layout_width="wrap_content"
@@ -57,11 +71,11 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311" />
+        app:layout_constraintVertical_bias="0.337" />
 
-    <!--CAMPO EMAIL-->
     <EditText
         android:id="@+id/email"
         android:layout_width="302dp"
@@ -79,12 +93,11 @@
         android:paddingEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.359" />
+        app:layout_constraintVertical_bias="0.378" />
 
-    <!--CAMPO DE SENHA-->
     <EditText
         android:id="@+id/senha"
         android:layout_width="303dp"
@@ -95,52 +108,36 @@
         android:drawableLeft="@drawable/custom_lock_icon"
         android:drawablePadding="12dp"
         android:ems="10"
+        android:layout_marginTop="15dp"
         android:hint="@string/dica_senha"
         android:inputType="textPassword"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--BOTÃO DE LOGAR-->
     <Button
         android:id="@+id/btn_logar"
         android:layout_width="301dp"
         android:layout_height="41dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/custom_button"
         android:text="@string/btn_logar"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintHorizontal_bias="0.559"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.585" />
 
-
-    <!--MENSAGEM NAO TEM CONTA-->
-    <TextView
-        android:id="@+id/lblMsgNaoTem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/msg_nao_tem"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
-
-
-    <!--BOTÃO DE CADASTRAR-->
     <Button
         android:id="@+id/bt_cadastrar"
-        android:layout_width="295dp"
-        android:layout_height="44dp"
+        android:layout_width="301dp"
+        android:layout_height="41dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/custom_button"
         android:baselineAligned="false"
@@ -148,10 +145,22 @@
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.563"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705" />
+        app:layout_constraintVertical_bias="0.667" />
+
+    <TextView
+        android:id="@+id/lblMsgNaoTem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_nao_tem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

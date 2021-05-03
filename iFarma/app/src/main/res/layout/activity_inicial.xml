@@ -12,28 +12,39 @@
         android:id="@+id/div_topo_farmacia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#d22"
+        android:background="#FF4848"
         android:padding="10dp"
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/img_logo_ifarma"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/lblTituloFarmacias"/>
+            android:layout_width="62dp"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="43dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginEnd="245dp"
+            android:layout_marginRight="245dp"
+            android:src="@drawable/img_logo_ifarma" />
 
         <TextView
             android:id="@+id/lblTituloFarmacias"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:textColor="#ddd"
-            android:textStyle="bold"
+            android:layout_width="173dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="101dp"
+            android:layout_marginLeft="101dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="63dp"
+            android:layout_marginRight="63dp"
+            android:layout_marginBottom="5dp"
             android:text="Farmácias"
-            android:fontFamily="casual"
-            android:layout_margin="5dp"
-            android:textSize="30dp" />
+            android:textColor="#fff"
+            android:textSize="30dp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <!--DIV DROGASIL-->
@@ -57,18 +68,23 @@
 
         <Button
             android:id="@+id/btn_drograsil"
-            android:layout_width="200dp"
+            android:layout_width="137dp"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/img_farm_drogasil"
-            android:text="Ver no mapa"
-            android:padding="10dp"
-            android:background="@drawable/custom_button"
             android:layout_centerVertical="true"
-            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/img_farm_drogasil"
+            android:background="@drawable/custom_button"
+
+            android:padding="10dp"
+            android:text="Ver no mapa"
             android:textColor="#fff"
-            android:fontFamily="casual"
-            android:textStyle="bold"
-            android:layout_margin="10dp" />
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btndg"
@@ -109,8 +125,8 @@
 
         <Button
             android:id="@+id/btn_ultrafarma"
-            android:layout_width="200dp"
-            android:layout_height="46dp"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
             android:text="Ver no mapa"
             android:padding="10dp"
             android:layout_toRightOf="@id/img_farm_ultra"
@@ -118,7 +134,7 @@
             android:layout_centerVertical="true"
             android:textSize="15sp"
             android:textColor="#fff"
-            android:fontFamily="casual"
+
             android:textStyle="bold"
             android:layout_margin="10dp"  />
 
@@ -160,18 +176,22 @@
 
         <Button
             android:id="@+id/btn_drogamais"
-            android:layout_width="200dp"
-            android:layout_height="46dp"
-            android:text="Ver no mapa"
-            android:padding="10dp"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_toRightOf="@id/img_farm_drogamais"
             android:background="@drawable/custom_button"
-            android:layout_centerVertical="true"
-            android:textSize="15sp"
+            android:padding="10dp"
+            android:text="Ver no mapa"
             android:textColor="#fff"
-            android:fontFamily="casual"
-            android:textStyle="bold"
-            android:layout_margin="10dp"   />
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btndrogmais"
@@ -196,7 +216,7 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textColor="#fff"
-        android:fontFamily="casual"
+
         android:textStyle="bold"
         android:text="Logout"
         android:layout_margin="10dp"

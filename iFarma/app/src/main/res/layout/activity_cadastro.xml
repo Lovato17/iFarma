@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="264dp"
-        android:layout_height="270dp"
+        android:layout_width="235dp"
+        android:layout_height="233dp"
         android:layout_marginStart="128dp"
         android:layout_marginLeft="128dp"
         android:contentDescription="@string/TODO"
@@ -43,42 +43,44 @@
         android:gravity="center">
 
         <!--LOGO IFARMA-->
+
+        <!--CAMPO NOME-->
+
         <ImageView
             android:id="@+id/img_logo_ifarma"
             android:layout_width="130dp"
             android:layout_height="114dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="35dp"
+            android:contentDescription="@string/TODO"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.116"
-            app:srcCompat="@drawable/img_logo_ifarma"
-            android:contentDescription="@string/TODO" />
+            app:srcCompat="@drawable/img_logo_ifarma" />
 
-        <!--CAMPO NOME-->
         <EditText
             android:id="@+id/editTextTextPersonName"
             android:layout_width="281dp"
             android:layout_height="44dp"
-            android:layout_marginTop="10dp"
-            android:ems="10"
-            android:hint="@string/dica_nome"
-            android:inputType="textPersonName"
+            android:layout_marginTop="5dp"
+            android:autofillHints=""
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/custom_person_icon"
             android:drawableLeft="@drawable/custom_person_icon"
+            android:drawablePadding="10dp"
+            android:ems="20"
+            android:hint="@string/dica_nome"
+            android:inputType="textPersonName"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:drawablePadding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.305"
-            android:autofillHints="" />
+            app:layout_constraintVertical_bias="0.305" />
 
         <!--CAMPO TELEFONE-->
         <EditText
@@ -154,7 +156,7 @@
             android:id="@+id/bt_cadastrar"
             android:layout_width="286dp"
             android:layout_height="42dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:text="@string/btn_cadastrar"
             android:background="@drawable/custom_button"
             android:textColor="#fff"
@@ -167,20 +169,13 @@
 
 
         <!--MENSAGEM JA TEM CONTA-->
-        <TextView
-            android:id="@+id/lblMsgJaTem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/msg_tem"
-            android:textSize="15sp" />
 
         <!--BOTAO LOGAR-->
         <Button
             android:id="@+id/btn_voltar"
             android:layout_width="286dp"
             android:layout_height="42dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:text="@string/btn_logar"
             android:background="@drawable/custom_button"
             android:textColor="#fff"
@@ -189,6 +184,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.811" />
+
+        <TextView
+            android:id="@+id/lblMsgJaTem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/msg_tem"
+            android:textSize="15sp" />
 
     </LinearLayout>
 

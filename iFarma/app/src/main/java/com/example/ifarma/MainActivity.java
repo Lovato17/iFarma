@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             {
 
            if (edtemail.getText().toString().isEmpty() || edtsenha.getText().toString().isEmpty()) {
-                   Toast.makeText(MainActivity.this, "EXISTEM CAMPOS EM BRANCOS", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(MainActivity.this, "Existem campos em Branco!!!", Toast.LENGTH_SHORT).show();
                }
                else {
                    //METODO PARA RECEBER AS INFORMAÇOES DO BANCO DE DADOS

@@ -45,6 +45,7 @@ public class Carrinho extends AppCompatActivity {
                 produtosSelecionados.clear();
                 precoTotal = 0;
                 Toast.makeText(Carrinho.this, "Compra Finalizada Com Sucesso!!", Toast.LENGTH_SHORT).show();
+
                startActivity(new Intent(Carrinho.this, inicial.class));
 
             }
