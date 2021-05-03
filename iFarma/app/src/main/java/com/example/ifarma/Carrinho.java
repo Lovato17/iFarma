@@ -31,17 +31,37 @@ public class Carrinho extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carrinho);
-
+        final TextView txtQTD = (TextView) findViewById(R.id.txtQuantidade);
+        final Button btnexcluir = (Button)findViewById(R.id.btnExcluir);
+        final TextView txtValor = (TextView)findViewById(R.id.txtTotal);
         final TextView ProdutoTXT = (TextView) findViewById(R.id.txtProdutos);
         final EditText totalEDT = (EditText) findViewById(R.id.edttotal);
         Finalizar = (Button) findViewById(R.id.btn_finalizar);
+
+        btnexcluir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //produtosSelecionados.add(" ");
+                totalEDT.setText("");
+                txtQTD.setText("");
+                txtValor.setText("");
+                ProdutoTXT.setText("");
+                produtosSelecionados.clear();
+                precoTotal = 0;
+                Toast.makeText(Carrinho.this, "Compra Excluida Com Sucesso!!", Toast.LENGTH_SHORT).show();
+
+                startActivity(new Intent(Carrinho.this, Produtos.class));
+
+            }
+        });
         Finalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //produtosSelecionados.add(" ");
                 totalEDT.setText("");
-                
-                ProdutoTXT.setText(" ");
+                txtQTD.setText("");
+                txtValor.setText("");
+                ProdutoTXT.setText("");
                 produtosSelecionados.clear();
                 precoTotal = 0;
                 Toast.makeText(Carrinho.this, "Compra Finalizada Com Sucesso!!", Toast.LENGTH_SHORT).show();
@@ -57,7 +77,8 @@ public class Carrinho extends AppCompatActivity {
                 startActivity(new Intent(Carrinho.this, Produtos.class));
             }
         });
-
+        txtQTD.setText("");
+        txtValor.setText("");
         ProdutoTXT.setText("");
 
         try {
@@ -75,14 +96,16 @@ public class Carrinho extends AppCompatActivity {
                 if (ProdutossTXT.contains(nome)){
                 }
                 else{
-                    ProdutoTXT.setText(ProdutoTXT.getText() + "\n Nome - " + nome +  " Preço unitario - " + preco + " Quantidade - " + qtd + " Preço - " + (preco * qtd));
+                    ProdutoTXT.setText(ProdutoTXT.getText() + "\n"+"|       " + nome);
+                    txtQTD.setText(txtQTD.getText() + "\n"+"|           "+qtd);
+                    txtValor.setText(txtValor.getText() + "\n"+"|           "+preco * qtd);
 
                     precoTotal += preco*qtd;
                     idTxt++;
                     idBtn++;
                 }
             }
-            totalEDT.setText("" + precoTotal);
+            totalEDT.setText("R$ " + precoTotal);
         }
         catch (Exception erro){
             ProdutoTXT.setText(erro.toString());
