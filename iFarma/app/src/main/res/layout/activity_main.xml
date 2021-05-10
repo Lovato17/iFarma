@@ -126,6 +126,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/custom_button"
         android:text="@string/btn_logar"
+        android:onClick="btn_log"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

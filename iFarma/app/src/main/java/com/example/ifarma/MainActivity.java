@@ -74,8 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
-                            //IR PARA A TELA A TELA INICIAL
-                            irparatelainicial();
+                            log();
 
                         } else {
                             //EXIBIR MENSAGEM
@@ -98,7 +97,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //METODO QUE LEVA PARA A TELA INICIAL
-    private void irparatelainicial() {
-        startActivity(new Intent(this, inicial.class));
+    private void log() {
+        startActivity(new Intent(this, load.class));
+    }
+
+    public void btn_log(View view) {
     }
 }

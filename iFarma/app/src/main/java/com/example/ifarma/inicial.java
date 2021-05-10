@@ -95,6 +95,10 @@ public class inicial extends AppCompatActivity {
                 //ABRE A ACTIVITY
                 startActivity(it);
 
+
+
+
+
             }
         });
 

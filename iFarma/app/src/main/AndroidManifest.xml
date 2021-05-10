@@ -12,11 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".load" />
+        <activity
+            android:name=".Loading"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen" />
         <activity android:name=".Carrinho" />
         <activity android:name=".Produtos" />
-        <activity android:name=".Drogamaisbrasil" />
-        <activity android:name=".Ultrafarma" />
-        <activity android:name=".Drogasil" />
         <activity android:name=".inicial" />
         <activity android:name=".Cadastro" />
         <activity android:name=".MainActivity" />
