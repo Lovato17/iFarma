@@ -9,7 +9,7 @@ Tela splash <br>
 Farmácias <br>
 <img src="iFarma/imgs/farmacias.jpg" width="210">  <br>
 Direção até a farmácia. <br>
-<img src="iFarma/imgs/farmaciaDaSuaLocalizacao.jpg" width="210">  <br>
+<img src="iFarma/imgs/farmaciaDaSuaLocalizacaoAtual.jpg" width="210">  <br>
 Loja da farmácia <br>
 <img src="iFarma/imgs/remediosDaFarmacia.jpg" width="210">  <br>
 Carrinho <br>
